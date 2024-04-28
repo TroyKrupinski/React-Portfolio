@@ -13,6 +13,12 @@ const ResearchPapers: React.FC = () => {
             summary: 'Exploring the relationship between number theory and algorithms, and their applications in computer science.',
             pdfLink: '/research-paper-two.pdf',
         },
+        {
+            title: 'Predictive Analytics in Hospital Data with Machine Learning',
+            summary: 'Using machine learning to predict patient length of stay based on race and total cost using real hospital data.',
+            pdfLink: '/quantum-computing.pdf',
+            
+        },
         // ...other papers
     ];
 

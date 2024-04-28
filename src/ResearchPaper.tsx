@@ -6,7 +6,7 @@ interface ResearchPaperProps {
     pdfLink: string;
 }
 
-const ResearchPaper: React.FC<ResearchPaperProps> = ({ title, summary, pdfLink }) => {
+const ResearchPaper: React.FC<ResearchPaperProps> = ({ title, summary, pdfLink  }) => {
     return (
         <div className="research-paper" onClick={() => window.open(pdfLink, "_blank")}>
             <h3 className="interactive-text">{title}</h3>
