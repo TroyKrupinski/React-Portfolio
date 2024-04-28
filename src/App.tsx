@@ -58,7 +58,7 @@ const App: React.FC = () => {
             {currentPage === 'home' && (
                 <>
                 <title>Troy Krupinski</title>
-                <div className="main-container">
+                <div className="interactive-component">
 
                     <Header />
                     </div>
