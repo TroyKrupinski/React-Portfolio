@@ -33,7 +33,10 @@ const App: React.FC = () => {
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
-            const newColor = 'Blue'/* logic to determine color based on scrollPosition */
+            const maxDocumentHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const colorValue = Math.floor((scrollPosition / maxDocumentHeight) * 255);
+            const newColor = `rgb(${colorValue}, ${colorValue}, ${colorValue})`;
+            changeBackground(newColor);
             changeBackground(newColor);
         };
 
@@ -54,6 +57,7 @@ const App: React.FC = () => {
 
             {currentPage === 'home' && (
                 <>
+                <title>Troy Krupinski</title>
                 <div className="interactive-component">
 
                     <Header />
