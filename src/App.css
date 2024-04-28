@@ -11,9 +11,12 @@ body, html {
   padding: 0;
   font-family: var(--font-family);
   color: var(--text-color);
-  background-image: linear-gradient(to right top, #10530e, #117a30, #199e5b, #33c58b, #5aeac3, #5aebd3, #5aebd3, #5aeac3, #33c58b, #199e5b, #117a30, #10530e);
+  background-color: var(--background-color);
   height: 100%;
-  min-height: 400vh;
+}
+.main-container {
+  background-image: linear-gradient(to right top, #10530e, #117a30, #199e5b, #33c58b, #5aeac3, #5aebd3, #5aebd3, #5aeac3, #33c58b, #199e5b, #117a30, #10530e);
+  min-height: 100vh; /* Adjust based on your content's actual height */
 }
 
 .contact-form-container {
@@ -266,14 +269,11 @@ li {
 /* You may adjust these styles as needed to fit the new grid layout */
 .repo-container {
   text-align: center;
-  background-image: linear-gradient(to right top, #7c96cf, #5f4492, hsl(189, 83%, 54%));
+ 
+  background-image: linear-gradient(to right top, #7c96cf, #5f4492, hsl(189, 83%, 54%));; /* This is a teal color */
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  /* Add metallic effect */
-  background-color: #333;
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
-  background-size: 40px 40px;
 }
 
 .repo-container a {
