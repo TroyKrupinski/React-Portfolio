@@ -12,11 +12,8 @@ body, html {
   font-family: var(--font-family);
   color: var(--text-color);
   background-image: linear-gradient(to right top, #10530e, #117a30, #199e5b, #33c58b, #5aeac3, #5aebd3, #5aebd3, #5aeac3, #33c58b, #199e5b, #117a30, #10530e);
-  height: 100%;
-  min-height: calc(100vh - (100vh - 100%));
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center bottom;
+  
 }
 
 .contact-form-container {
@@ -269,11 +266,45 @@ li {
 /* You may adjust these styles as needed to fit the new grid layout */
 .repo-container {
   text-align: center;
- 
-  background-image: linear-gradient(to right top, #7c96cf, #5f4492, hsl(189, 83%, 54%));; /* This is a teal color */
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+  background-size: 200% 100%;
+  background-position: right;
+  animation: metalicStripes 5s linear infinite;
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes metalicStripes {
+  0% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
+.repo-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+  transform: translateX(-100%);
+  animation: eagleFly 5s linear infinite;
+}
+
+@keyframes eagleFly {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 .repo-container a {
@@ -393,7 +424,7 @@ h5{
 }
 
 .research-paper {
-  background-color: #fff;
+  background-color: #ffffff;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 1rem;
