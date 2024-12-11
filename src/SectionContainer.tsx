@@ -7,7 +7,7 @@ interface SectionContainerProps {
 
 export const SectionContainer: React.FC<SectionContainerProps> = ({ title, children }) => (
     <section>
-        <h2>{title}</h2>
+        <h1>{title}</h1>
         {children}
     </section>
 );

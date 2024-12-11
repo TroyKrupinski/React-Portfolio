@@ -128,9 +128,7 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
+
 
 button {
   font-family: var(--font-family);
@@ -174,12 +172,17 @@ header {
 
 header h1 {
   margin: 0.5rem 0;
+  
 }
 
 header p {
   margin: 0.25rem 0;
 }
-
+section h1{
+  color: #490000;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
 h2 {
   color: var(--primary-color);
   margin-bottom: 1rem;
@@ -266,10 +269,7 @@ li {
 /* You may adjust these styles as needed to fit the new grid layout */
 .repo-container {
   text-align: center;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
-  background-size: 200% 100%;
   background-position: right;
-  animation: metalicStripes 5s linear infinite;
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -295,7 +295,6 @@ li {
   height: 100%;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
   transform: translateX(-100%);
-  animation: eagleFly 5s linear infinite;
 }
 
 @keyframes eagleFly {
@@ -315,17 +314,34 @@ li {
   color: #e0e0e0; /* Lighter text for the description for better contrast */
 }
 
-/* Ensure to review your overall layout and adjust margins/paddings as needed */
-
-
+.repo-container:hover::before {
+  animation: metalicStripes 2s infinite linear;
+}
+.occ{
+  background-color: #84d881;
+  
+  margin: 0; /* Adjusted for the grid layout */
+  padding: 0.5rem;
+  border-radius: 5px;
+}
 a {
   color: var(--primary-color);
   font-weight: bold;
+  margin: .2rem;
+}
+h3{
+  color: #022815;
+  font-weight: bold;
+  font-style: italic;
 }
 .education-entry {
-  margin-bottom: 1rem;
+  margin-bottom: .4rem;
 }
-
+p{
+  margin: .2rem;
+  color: #c8c8c8;
+  font-weight: bold;
+}
 .education-logo {
   height: 90; /* or the size you prefer */
   margin-right: 1rem;
@@ -373,9 +389,8 @@ body {
 .repo-container {
   text-align: center;
   background-color: rgb(40, 137, 150); /* This is a teal color */
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 8px;
+  padding: 2rem;
+
 }
 
 .repo-container a {
@@ -384,6 +399,20 @@ body {
 
 .repo-container p {
   color: #e0e0e0; /* Lighter text for the description for better contrast */
+}
+.git h2 {
+  display: inline-flexbox; /* Makes the box only stretch to the text */
+  justify-content: center;
+  font-style: bold;
+  text-align: center;
+  background-color: #e7ede4;
+  padding: .4rem;
+  border-radius: 8px; /* Makes the box rounded */
+  box-shadow: 0 2px 4px rgba(124, 84, 84, 0.1);
+}
+i{
+  font-size: 20px;
+  color-scheme: #e7ede4;
 }
 h6 {
   color: hwb(115 5% 91% / 0.8);
@@ -395,7 +424,6 @@ h6 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
-/* Add more styles for other parts of the education section as needed */
 
 @keyframes backgroundPulse {
   0%, 100% {
@@ -455,9 +483,11 @@ h5{
 }
 .interactive-text {
   transition: background-color 0.3s ease;
-  padding: 2px 0; /* Ensures the background highlight doesn't look too cramped */
+  padding: .2px 0; /* Ensures the background highlight doesn't look too cramped */
 }
 
 .interactive-text:hover {
-  background-color: rgba(255,255,0,0.2); /* Light yellow background on hover */
+  border-radius: 8px; /* Optional for rounded corners */
+
+  background-color: rgba(17, 38, 144, 0.2); /* Light yellow background on hover */
 }

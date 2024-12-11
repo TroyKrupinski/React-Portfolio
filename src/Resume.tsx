@@ -1,5 +1,4 @@
 import React from 'react';
-import { Worker } from '@react-pdf-viewer/core'; // only if you are using react-pdf-viewer
 import '@react-pdf-viewer/core/lib/styles/index.css'; // only if you are using react-pdf-viewer
 const pdfFile = '/Resume.pdf'; // No import statement required
 
@@ -9,13 +8,11 @@ const Resume: React.FC = () => {
         <div className="resume-container">
             {/* If using react-pdf-viewer, set up the viewer here */}
             {/* Otherwise, you can use an iframe as shown below */}
-            <iframe
-            
+            <iframe 
                 src={pdfFile}
                 width="100%"
                 height="100%"
                 style={{ minHeight: '100vh' }} // Adjust the height as needed
-                frameBorder="0"
             >
                 This browser does not support PDFs. Please download the PDF to view it: 
                 <a href={pdfFile}>Download PDF</a>

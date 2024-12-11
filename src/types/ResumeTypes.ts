@@ -15,5 +15,5 @@ export interface EducationDetail {
     institution: string;
     location: string;
     duration: string;
-    gpa?: string; // GPA is optional
+    gpa: string; // GPA is optional
 }
