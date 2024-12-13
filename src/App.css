@@ -388,9 +388,20 @@ body {
 }
 .repo-container {
   text-align: center;
-  background-color: rgb(40, 137, 150); /* This is a teal color */
+  background-color: rgb(40, 137, 150);
   padding: 2rem;
+}
 
+@media (max-width: 768px) {
+  ul {
+    grid-template-columns: repeat(2, 1fr); /* Show only 2 columns on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  ul {
+    grid-template-columns: 1fr; /* Show single column on very small screens */
+  }
 }
 
 .repo-container a {
@@ -401,14 +412,22 @@ body {
   color: #e0e0e0; /* Lighter text for the description for better contrast */
 }
 .git h2 {
-  display: inline-flexbox; /* Makes the box only stretch to the text */
-  justify-content: center;
+  display: block; /* Changed to block for full width */
+  margin: 1rem auto; /* Added vertical and horizontal auto margin */
+  width: fit-content; /* Makes the box fit the content width */
   font-style: bold;
   text-align: center;
   background-color: #e7ede4;
-  padding: .4rem;
-  border-radius: 8px; /* Makes the box rounded */
+  padding: .4rem 1rem; /* Added more horizontal padding */
+  border-radius: 8px;
   box-shadow: 0 2px 4px rgba(124, 84, 84, 0.1);
+}
+
+.header a{
+  color: #e7ede4;
+  font-size: 20px;
+  font-style: italic;
+  
 }
 i{
   font-size: 20px;

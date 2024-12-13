@@ -30,7 +30,8 @@ const Repositories: React.FC = () => {
     return (
         <div>
             <div className="git">
-            <h2>https://github.com/TroyKrupinski?tab=repositories</h2>
+            <h2><a href="https://github.com/TroyKrupinski?tab=repositories" target="_blank" rel="noopener noreferrer" style={{ fontStyle: 'italic' }}>https://github.com/TroyKrupinski?tab=repositories</a></h2>
+
             <h2>Public Repositories</h2>
             </div>
             <ul>
