@@ -17,7 +17,10 @@ const Header: React.FC = () => {
             <i>Artificial Intelligence Researcher</i>
             <p>Graduate Candidate & Student Member of the Orthopedic Research Society</p>
             <p>TroyKrupinski@my.unt.edu • (512) 517-5334 • Denton, TX</p>
-            
+            <div className="header">
+            <a href="https://www.linkedin.com/in/troy-krupinski-38287215b/" style={{ textDecoration: 'underline' }}>
+            LinkedIn</a>
+</div>
             <p ref={podiumRef}></p>
             <p>
             <div className="header">
